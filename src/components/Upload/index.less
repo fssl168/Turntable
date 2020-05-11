@@ -1,0 +1,106 @@
+.upload-input-wrapper {
+  display: inline-block;
+
+  .image-picker-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .image-picker-item-remove {
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      right: 6px;
+      top: 6px;
+      text-align: right;
+      vertical-align: top;
+      z-index: 2;
+      background-size: cover;
+      background-image: url('../../assets/close.png')
+    }
+
+    .image-picker-item-content {
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &.image-picker-upload-btn {
+      box-sizing: border-box;
+      text-align: left;
+
+      .placeholder {
+        color: #999;
+      }
+
+      //&:before {
+      //  width: 8px;
+      //  height: 65px;
+      //  content: " ";
+      //  position: absolute;
+      //  top: 50%;
+      //  left: 50%;
+      //  transform: translate(-50%, -50%);
+      //  background-color: #005c98;
+      //}
+      //
+      //&:after {
+      //  width: 65px;
+      //  height: 8px;
+      //  content: " ";
+      //  position: absolute;
+      //  top: 50%;
+      //  left: 50%;
+      //  transform: translate(-50%, -50%);
+      //  background-color: #005c98;
+      //}
+
+      .progress-content {
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+
+        .progress {
+          width: 100%;
+
+          .progress-outer {
+            background-color: #ddd;
+            display: block;
+            height: 6px;
+            width: 100%;
+
+            .progress-bar {
+              height: 6px;
+              border: 4px solid #005c98;
+              background: #005c98;
+              transition: all .3s linear 0s;
+            }
+          }
+        }
+      }
+    }
+
+    input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+    }
+  }
+}

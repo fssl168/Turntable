@@ -1,0 +1,105 @@
+@import "../../animation.less";
+.home {
+  height: 100%;
+  position: relative;
+  background: #e42b28;
+  padding: 80px 45px;
+  overflow-y: scroll !important;
+
+  .alert-box {
+    width: 635px;
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    background: rgba(23, 194, 194, 0.8);
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    z-index: 9999;
+    animation: fadeInDown-01 0.8s 0.1s alternate both, fadeOutUp 0.8s 3s alternate forwards;
+
+    &.error {
+      background: rgba(255, 86, 0, 0.8);
+    }
+  }
+
+  .header {
+    width: 100%;
+    position: relative;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      width: 338px;
+      height: 41px;
+      border: none;
+    }
+
+    .subtitle {
+      width: 233px;
+      height: 29px;
+    }
+  }
+
+  .container {
+    text-align: center;
+    position: relative;
+
+    .content {
+      margin: 75px auto 0;
+      width: 444px;
+      height: 616px;
+      background: url("../../assets/content-bg.png") center center no-repeat;
+      background-size: cover;
+      position: relative;
+
+      .smiley-face {
+        width: 155px;
+        height: 155px;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+      }
+
+      .blessing {
+        width: 340px;
+        height: 539px;
+        margin: 30px auto;
+      }
+
+      .desc-text {
+        position: absolute;
+        right: -135px;
+        bottom: 0;
+        width: 265px;
+        height: 220px;
+      }
+    }
+
+    .btn {
+      margin: 160px auto 0;
+      width: 465px;
+      height: 97px;
+      line-height: 97px;
+      background: #000;
+      border-radius: 50px;
+      text-align: center;
+      color: #fff;
+      font-weight: 500;
+      font-size: 48px;
+      text-shadow: 0 0 10px #fff;
+      letter-spacing: 12px;
+    }
+  }
+  .activity-time {
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}

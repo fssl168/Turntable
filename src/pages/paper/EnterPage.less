@@ -1,0 +1,123 @@
+@import '../../animation.less';
+
+.enter-page-component {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #fff;
+  overflow-y: scroll;
+
+  .logo {
+    width: 100%;
+    height: 190px;
+    background: #000;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .alert-box {
+    width: 635px;
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    background: rgba(23, 194, 194, 0.8);
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    z-index: 9999;
+    animation: fadeInDown-01 0.8s 0.1s alternate both, fadeOutUp 0.8s 3s alternate forwards;
+
+    &.error {
+      background: rgba(255, 86, 0, 0.8);
+    }
+  }
+
+  .prompt {
+    padding: 130px 0 0;
+    text-align: center;
+
+    p {
+      margin: 0 auto;
+      padding: 0;
+      font-size: 36px;
+      font-weight: bold;
+      color: #000;
+    }
+  }
+
+  .form {
+    width: 485px;
+    display: block;
+    margin: 90px auto;
+    text-align: center;
+
+    .form-item {
+      width: 100%;
+      margin-bottom: 55px;
+      display: flex;
+      flex-direction: column;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.row {
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+      }
+
+      .item-input {
+        flex: 1;
+
+        input, .input {
+          width: 485px;
+          background: #fff;
+          border: 2px solid #939393;
+          border-radius: 10px;
+          padding: 15px 30px;
+          font-size: 28px;
+          color: #000;
+          box-shadow: 5px 5px 20px #939393;
+          text-align: left;
+
+          &::placeholder, .placeholder {
+            color: #999;
+          }
+        }
+      }
+
+      .tooltip {
+        color: #fff;
+        font-size: 28px;
+        margin: 15px 0;
+        text-align: center;
+      }
+
+      .inputBtn {
+        margin: 0 auto;
+        width: 294px;
+        height: 75px;
+        line-height: 75px;
+        background: #F6C555;
+        border: 3px solid #F6C555;
+        border-radius: 25px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 46px;
+        text-shadow: 0 0 10px #fff;
+        letter-spacing: 12px;
+        text-align: center;
+      }
+    }
+  }
+}
